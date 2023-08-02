@@ -10,39 +10,42 @@
 </head>
 
 <body>
-  <header>
-    <h1>The CSS Blog</h1>
+ 
+  <header class="header">
+    <h1>The CSS Blog</h1> 
+   </header>
     <nav>
       <ul>
         <li><a href="#">About Me</a></li>
         <li><a href="#">Work</a></li>
         <li><a href="#">Contact Me</a></li>
-        <li><a href="#">Resume</a></li>
       </ul>
     </nav>
-  </header>
 
+<img src="./assets/images/IMG_3693.jpg"> 
+    <h1 class = image-text>I'm on the right</h1>
   <main>
     <section>
-      <article id="About Me">
-        <h2>About Me</h2>
+      <article id="About Me" class="about-me" >
+        <h2 class="float-left">About Me</h2>
         <div>
           <p>My name is Chancellor Schmidt and I am a 24 year old programmer from Wilmington, North Carolina! I graduated from NC State University in 2021 with my bachelors in Psychology and proceeded to work as a pharmacy technician for the next year or so. Now, having taken UNC's coding bootcamp, I am ready to aide my future employer in developing advanced code. Likewise I am interested in joining a team of inspired individuals who are looking to better themselves by learning from one another and working in tandem with eachother. With my efficiency and outside-the-box thinking, I know I will be a valuable asset to any team!  </p>
         </div>
       </article>
-      <article id="Work">
-            <h2>Work</h2>
-              <h3>Pet Pics!</h3>
-              <img src="./assets/images/IMG_2066.jpg" alt="Joan playing with her toy" />
-              <img src="./assets/images/IMG_2067.jpg" alt="Joan looking at camera" />
-              <img src="./assets/images/IMG_2142.jpg" alt="Joan looking crazy!" />
-              <img src="./assets/images/IMG_2216.jpg" alt="Joan on her throne" />
-              <img src="./assets/images/IMG_2307.jpg" alt="Joan in hotdog costume" />
-              <img src="./assets/images/IMG_2409.jpg" alt="Joan asleep" />
-              <div></div>
+      <article id="Work" class="work" >
+            <h2 class="float-left">Work</h2>
+               <div>
+                <p>Pet Pics!</p>
+                <img src="./assets/images/IMG_2066.jpg" alt="Joan playing with her toy" class="joan">
+                <img src="./assets/images/IMG_2067.jpg" alt="Joan looking at camera" class="joan">
+                <img src="./assets/images/IMG_2142.jpg" alt="Joan looking crazy!" class="joan">
+                <img src="./assets/images/IMG_2216.jpg" alt="Joan on her throne" class="joan">
+                <img src="./assets/images/IMG_2307.jpg" alt="Joan in hotdog costume" class="joan">
+                <img src="./assets/images/IMG_2409.jpg" alt="Joan asleep" class="joan">
+             </div>
         </article>
-        <article id="Contact Me">
-            <h2>Contact Me</h2>
+        <article id="Contact Me" class="contact-me" >
+            <h2 class="float-left">Contact Me</h2>
              <div>
               <a class="email" href = "mailto: cbschmidt32@gmail.com">Send Email</a>
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
