@@ -1,213 +1,299 @@
-*, *:before, *:after {
-  box-sizing: inherit; 
-  font-family: 'poppins';
-}
-
-
-html, body {
- 
-  font-size: 15px;
-  line-height: 1.5;
-}
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-html {
+:root {
+    --clr-primary-400: 263 55% 52%;
+    --clr-secondary-400: 217 19% 35%;
+    --clr-secondary-500: 219 29% 14%;
+    --clr-neutral-100: 0 0% 100%;
+    --clr-neutral-200: 210 46% 95%;
+    --clr-neutral-300: 0 0% 81%;
+  
+    --ff-primary: "Barlow Semi Condensed", sans-serif;
+  
+    --fw-400: 500;
+    --fw-700: 600;
+  
+    --fs-300: 0.6875rem;
+    --fs-400: 0.8125rem;
+    --fs-500: 1.25rem;
+  }
+  
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html {
-  display: block;
+body {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
 .navBar {
-  background-color: #333;
-  overflow: hidden
+    background-color: sandybrown;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .navBar a:hover{
+    background-color: #ddd;
+    color: black;
+  }
+  .navBar a {
+    font-family: var(--ff-primary);
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .active {
+    background-color: mediumvioletred;
+    color: white;
 }
 
-.navBar a:hover{
-  background-color: #ddd;
-  color: black;
-}
-.navBar a {
-  font-family: "Montserrat", sans-serif;
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+  body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+  
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-400);
+  
+    background-color: hsl(var(--clr-neutral-200));
+  }
+
+  h1,
+h2,
+h3 {
+  font-weight: var(--fw-700);
 }
 
-.active {
-  background-color: #04AA6D;
-  color: white;
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.section {
+    font-size: var(--fs-400);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
+}
+
+.about-me{
+    background-color: #a775f1;  
+    text-align: center;
+    font-size: inherit;
+}
+
+.about-me p::first-line{
+    font-size: 200%;
+    text-decoration: underline;
+}
+
+.joan1{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/IMG_2066.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: tomato;
+        border: darkslateblue solid 20px;
+        
+}
+
+.joan2{
+    background-image:  url(../images/IMG_2067.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: lightpink;
+    border: solid 10px palevioletred;
+}
+
+.joan3{
+       background-image: url(../images/IMG_2142.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: indianred;
+        border: crimson solid 10px;
+    }
+
+.joan5{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/IMG_2307.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: thistle;
+    border: coral solid 20px;
+}
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+    padding-block: 2rem;
+    width: min(90%, 70rem);
+    margin-inline: auto;
+    margin-top: 30px;
+  }
+
+  @media (min-width: 50em){
+    .grid{
+        grid-template-columns: 
+            repeat(4, 1fr);
+        grid-template-rows: 
+            repeat(3, 1fr);
+    }
+
+    .about-me{
+        grid-column-start: 4; 
+        grid-row-start: 2;
+        grid-row: span 2;
+      
+    }
+
+    .joan3{
+        grid-column: span 1;
+        grid-row-start: 2;
+        grid-column-start: 3;
+    }
+        
+    .joan1{
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-column: span 2;
+    }
+
+    .joan5{
+        grid-column-start: 1;
+        grid-row-start: 3;
+        grid-column: span 2;
+    }
+
+    .joan2{
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
+
+    .hero-image{
+        grid-column: span 4;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+    }
+    }
+
+.work{
+    font-size: 150%;
+    text-decoration: underline;
+    background-color: hotpink;
+    border-radius: 0.5rem;
+    grid-column: span 3;
+    text-align: center;
+    color: black
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/IMG_3693.jpg");
-  height: 300px;
-  align-self: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-
-}
-
-.hero-text {
-  text-align: center;
-  
- 
-
-  color: white;
-  font-size: 120%;
-}
-
-.joan {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 300px;
-  border: lightpink 10px solid;
-  filter: blur(8px);
-}
-
-.column {
-  background-color: #333;
-  overflow: auto;
-  white-space: nowrap;
-  padding: 10px;
-}
-
-
-.joan:hover{
-  filter: blur(0px);
-}
-
-
-.About-Me,
-.Work,
-.Contact-Me {
-  text-align: center;
-}
-
-.About-Me h1 {
-  text-decoration: underline;
-  font-size: 150%;
-  background-color: khaki;
-}
-
-.About-Me{
-
-  background-color: bisque;
-}
-
-.Work h1 {
-  background-color: peru;
-}
-
-.Work{
-  background-color: palevioletred;
-}
-
-.Contact-Me {
-  background-color: tomato;
-}
-
-.Contact-Me h1 {
-  background-color: rosybrown;
-}
-
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-}
-.fa:hover {
-  opacity: 0.7;
-}
-
-.fa-linkedin {
-  background: dodgerblue;
-  color: white;
-}
-
-.fa-github {
-  background: dimgrey;
-  color: white;
-}
-
-.email{
-  color: black;
-}
-
-
-@media (min-width: 500px) {
-  .hero-image {
-    background: url(../images/IMG_3693.jpg);
-    background-size: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/IMG_3693.jpg");
+    height: 400px;
+    background-position: center;
     background-repeat: no-repeat;
-  }
-}
-@media (min-width: 800px) {
-  .hero-image {
-    background: url(../images/IMG_3693.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
-}
-
-@media (max-width: 499px) {
-  .hero-image {
-    background: url(../images/IMG_3693.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-  
+    background-size: 100% 100%;
+    border-radius: 0.5rem;
   }
   
-}
-
-@media (min-width: 500px) {
   .hero-text {
-    background-size: 100%;
-    background-repeat: no-repeat;
+    color: aliceblue;
+    font-size: 200%;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }
   
+  .fa-linkedin {
+    background: dodgerblue;
+    color: white;
+    padding: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
   }
-
-}
-
-@media (min-width: 800pxpx) {
-  .hero-text {
-    background-size: 100%;
-    background-repeat: no-repeat;
   
+  .fa-github {
+    background: dimgrey;
+    color: white;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
+  .email{
+    color: black;
+    font-size: 125%;
   }
 
-}
-
-@media (max-width: 320px) {
-  .hero-image,
-  .hero-text,
-  .About-Me p,
-  .About-Me h1,
-  .Work p,
-  .Work h1,
-  .Contact-Me h1,
-  .navbar a,
-  .navbar .active {
-    width: 50%;
-
+  .contact-me {
+    text-align: center;
+    background-color: mediumvioletred;
   }
 
-}
+  .contact-me h1{
+    background-color: cornflowerblue;
+  }
 
-@font-face {
-  font-family: 'poppins';
-  src: url('https://fonts.google.com/specimen/Poppins');
-}
+  .link-1{
+    color: white;
+    font-size: 150%;
+    border: darkslateblue solid 20px;
+    background-color: #a775f1;
+    border-radius: 0.5rem;
+  }
+
+  .link-2{
+    color: white;
+    font-size: 150%;
+    text-align: center;
+    border: coral solid 20px;
+    background-color: peru;
+    border-radius: 0.5rem;
+  }
+
+  .link-1:hover,
+  .link-2:hover {
+    background-color: cadetblue;
+    font-size: 200%;
+  }
+
+  .footer{
+    text-align: center;
+    margin-bottom: 2%;
+  }

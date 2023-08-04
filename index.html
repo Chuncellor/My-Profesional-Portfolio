@@ -4,47 +4,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSS Resets</title>
-  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <title>C. Schmidt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/reset.css"/>
 </head>
 
+
+
 <body>
-  <section>
-    <nav class="navBar">
-      <a href="#Home" class="active">Home</a>
-      <a href="#About-Me">About Me</a>
-      <a href="#Work">Work</a>
-      <a href="#Contact-Me">Contact Me</a>
-    </nav>
-  </section>
-  <header class="hero-image">
-    <section class="hero-text">
-      <h1>My name is Chancellor Schmidt</h1>
-      <p>and I'm a web developer</p>
+    <section>
+        <nav class="navBar">
+          <a href="#Home" class="active">Home</a>
+          <a href="#About-Me">About Me</a>
+          <a href="#Work">Work</a>
+          <a href="#Contact-Me">Contact Me</a>
+        </nav>
+      </section>
+    <section>
     </section>
-  </header>  
-  <main class="content">
-    <section class="About-Me" id="About-Me">
-        <h1>About Me</h1>
-          <p>My name is Chancellor Schmidt and I am a 24 year old programmer from Wilmington, North Carolina! I graduated from NC State University in 2021 with my bachelors in Psychology and proceeded to work as a pharmacy technician for the next year or so. Now, having taken UNC's coding bootcamp, I am ready to aide my future employer in developing advanced code. Likewise I am interested in joining a team of inspired individuals who are looking to better themselves by learning from one another and working in tandem with eachother. With my efficiency and outside-the-box thinking, I know I will be a valuable asset to any team!</p>
+<main class="grid">
+    <header class="hero-image" id="Home" >
+        <article class="hero-text">
+          <h1>My name is Chancellor Schmidt</h1>
+          <p>and I'm a web developer</p>
+        </article>
+      </header>
+    <article class="section about-me" id="About-Me">
+        <div class="flex1">
+            <p>About Me<br> My name is Chancellor Schmidt and I am a 24 year old programmer from Wilmington, North Carolina! I graduated from NC State University in 2021 with my bachelors in Psychology and proceeded to work as a pharmacy technician for the next year or so. Now, having taken UNC's coding bootcamp, I am ready to aide my future employer in developing advanced code. Likewise I am interested in joining a team of inspired individuals who are looking to better themselves by learning from one another and working in tandem with eachother. With my efficiency and outside-the-box thinking, I know I will be a valuable asset to any team!</p>
+        </div>
+    </article>
+      <article class="section joan1">
+        <div >
+            <a class="link-1" href="https://github.com/Chuncellor/Challenge1">My First Challenge</a>
+        </div>
+      </article>
+      <article class="section joan2">
+        <div class="flex"></div>
+      </article>
+      <article class ="section joan3">
+        <div class="flex"></div>
+      </article>
+        <article class="section joan5"> 
+          <div class="flex">
+              <a class="link-2" href="https://github.com/Chuncellor/prework-study-guide">My Prework-Study-Guide</a>
+          </div>
+        </article>
+      </main>
+
+
+    <section>
+      <p class="work" id="Work">Portfolio- click on the links to see my work! </p>
     </section>
-    <section class="Work" id="Work">
-        <h1>Work</h1>
-          <p>...or maybe just some cat pictures...</p>
-          <div class="column">           
-            <a href="#capt1"><img src="./assets/images/IMG_2142.jpg" alt="Joan looking crazy!" class="joan"></a>
-            <a href="#capt2"><img src="./assets/images/IMG_2066.jpg" alt="Joan playing with her toy" class="joan"></a>
-            <a href="#capt3"><img src="./assets/images/IMG_2216.jpg" alt="Joan on her throne" class="joan"></a>
-            <a href="#capt4"><img src="./assets/images/IMG_2307.jpg" alt="Joan in hotdog costume" class="joan"></a>
-            <a hred="#capt5"><img src="./assets/images/IMG_2067.jpg" alt="Joan looking at camera" class="joan"></a>
-            <a href="#capt6"><img src="./assets/images/IMG_2409.jpg" alt="Joan asleep" class="joan"></a>
-         </div>
-    </section>
-    <section class="Contact-Me" id="Contact-Me">
-      <h1>Contact Me</h1>
-        <a class="email" href = "mailto: cbschmidt32@gmail.com">Send Email</a>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <a target = "blank" href = "https://www.linkedin.com/in/chancellor-schmidt-6a4895212/" class="fa fa-linkedin"></a>
-        <a target = "blank" href="https://github.com/Chuncellor" class="fa fa-github"></a>
-    </section>
+    <section><br></section>
+      <section class="contact-me" id="Contact-Me">
+        <h1>Contact Me</h1>
+          <a class="email" href = "mailto: cbschmidt32@gmail.com">Send Email</a>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <a target = "blank" href = "https://www.linkedin.com/in/chancellor-schmidt-6a4895212/" class="fa fa-linkedin"></a>
+          <a target = "blank" href="https://github.com/Chuncellor" class="fa fa-github"></a>
+      </section>
+
+
+      <footer class="footer">
+        <p>Made by Chancellor Schmidt</p>
+        <p>All photos used are courtesy of Joan Knee Schmidt</p>
+        <p>2023</p>
+      </footer>
+
+</body>
+
+</html>
