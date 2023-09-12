@@ -286,9 +286,17 @@ h3 {
     background-color: peru;
     border-radius: 0.5rem;
   }
+.link-3 {
+    color: white;
+    font-size: 150%;
+    text-align: center;
+    border: coral solid 20px;
+    
+}
 
   .link-1:hover,
-  .link-2:hover {
+  .link-2:hover,
+    .link-3:hover {
     background-color: cadetblue;
     font-size: 200%;
   }
